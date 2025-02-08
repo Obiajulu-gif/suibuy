@@ -1,6 +1,5 @@
-// app/layout.js
-import Navbar from "./components/Navbar";
-import ClientLayout from "./ClientLayout";
+import "./globals.css";
+import ClientLayout from "./ClientLayout"; // Import the new client-side layout
 
 export const metadata = {
 	title: "Suibuy Marketplace",
@@ -11,10 +10,7 @@ export default function RootLayout({ children }) {
 	return (
 		<html lang="en">
 			<body>
-				<ClientLayout>
-					<Navbar />
-					{children}
-				</ClientLayout>
+				<ClientLayout>{children}</ClientLayout>
 			</body>
 		</html>
 	);
