@@ -5,6 +5,7 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { useEffect, useState, useCallback } from "react";
 import Particles from "react-tsparticles";
+import { particlesOptions } from "./particlesConfig";
 import { loadSlim } from "tsparticles-slim";export default function Hero() {
 	  const particlesInit = useCallback(async (engine) => {
 			await loadSlim(engine);
@@ -18,16 +19,7 @@ import { loadSlim } from "tsparticles-slim";export default function Hero() {
 				<Particles
 					id="tsparticles"
 					init={particlesInit}
-					options={{
-						particles: {
-							number: { value: 50 },
-							shape: { type: "circle" },
-							move: { enable: true, speed: 1 },
-							opacity: { value: 0.2 },
-							size: { value: 5 },
-							color: { value: "#909cc2" },
-						},
-					}}
+					options={particlesOptions}
 					className="absolute inset-0 z-0"
 				/>
 

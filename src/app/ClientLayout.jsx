@@ -1,9 +1,12 @@
-"use client"; // Ensure this file is a Client Component
+"use client"; 
 
-import { WalletKitProvider } from "@mysten/wallet-kit";
-import Navbar from "./components/Navbar";
+import Navbar from "./components/Navbar"; // ✅ Corrected path (assuming it's in the same folder)
+
 export default function ClientLayout({ children }) {
-	return <WalletKitProvider>
-		<Navbar/>
-		{children}</WalletKitProvider>;
+	return (
+		<>
+			<Navbar />
+			{children}
+		</>
+	);
 }

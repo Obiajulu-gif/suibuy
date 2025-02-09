@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import { AiOutlineMenu, AiOutlineClose, AiOutlineUser } from "react-icons/ai";
-import { ConnectButton } from "@mysten/wallet-kit";
 
 export default function Navbar() {
 	const [navOpen, setNavOpen] = useState(false);
@@ -28,7 +27,6 @@ export default function Navbar() {
 					<button className="flex items-center bg-black text-white px-4 py-2 rounded-full border border-white">
 						⚡ <span className="ml-1">0 XP</span>
 					</button>
-					<ConnectButton className="!bg-indigo-600 !text-white !px-4 !py-2 !rounded-lg hover:!bg-indigo-700" />
 					<AiOutlineUser className="text-white text-2xl cursor-pointer" />
 				</div>
 
@@ -54,7 +52,6 @@ export default function Navbar() {
 					<button className="mt-4 flex items-center bg-black text-white px-4 py-2 rounded-full border border-white">
 						⚡ <span className="ml-1">0 XP</span>
 					</button>
-					<ConnectButton className="!bg-indigo-600 !text-white !px-4 !py-2 !rounded-lg hover:!bg-indigo-700 mt-2" />
 					<AiOutlineUser className="text-white text-2xl cursor-pointer mt-2" />
 				</div>
 			)}
