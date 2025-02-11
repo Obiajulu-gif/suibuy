@@ -27,7 +27,7 @@ import { loadSlim } from "tsparticles-slim";export default function Hero() {
 				<motion.div
 					animate={{ y: [-5, 5, -5] }}
 					transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-					className="absolute top-1 right-8"
+					className="absolute top-1 right-8 hidden md:block"
 				>
 					<Image src="/images/hero.png" alt="cube" width={450} height={450} />
 				</motion.div>
