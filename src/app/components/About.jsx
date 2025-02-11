@@ -23,7 +23,7 @@ const About = () => {
 					<h2 className="text-5xl font-bold mb-6 leading-tight">
 						Web3 Marketplace for <br></br> Local Businesses
 					</h2>
-					<p className="text-gray-300 text-xl leading-relaxed">
+					<p className="text-transparent bg-clip-text bg-gradient-to-r from-[#cbcbe7] to-[#80badb] text-xl leading-relaxed">
 						Suibuy is a blockchain-based marketplace designed to empower local
 						businesses, artisans, and small vendors, allowing them to sell
 						directly to consumers without middlemen. Our platform ensures
@@ -34,14 +34,14 @@ const About = () => {
 				</div>
 
 				{/* Right Section (Large Image) */}
-				<div className="relative w-1/2 flex justify-center">
+				<div className="relative w-1/2  justify-center hidden md:flex">
 					<div className="relative w-full h-full transform rotate-[-10deg]">
 						<Image
 							src="/images/about.png" // Replace with your actual image path
 							alt="Suibuy Marketplace"
 							width={500}
 							height={300}
-							className="rounded-lg shadow-lg"
+							className="rounded-lg shadow-lg "
 						/>
 					</div>
 				</div>
@@ -50,7 +50,7 @@ const About = () => {
 			{/* Second Section - Problems & Solutions */}
 			<div className="flex items-center justify-between w-full mb-20">
 				{/* Left Side - Problems */}
-				<div className="w-1/2 pr-10">
+				<div className="w-1/2 pr-10 text-transparent bg-clip-text bg-gradient-to-r from-[#cbcbe7] to-[#80badb]">
 					<h2 className="text-5xl font-bold mb-6 leading-tight">
 						Problems Faced Vendors
 					</h2>
@@ -79,7 +79,7 @@ const About = () => {
 				</div>
 
 				{/* Right Side - Solutions */}
-				<div className="w-1/2">
+				<div className="w-1/2 text-transparent bg-clip-text bg-gradient-to-r from-[#cbcbe7] to-[#80badb]">
 					<h2 className="text-5xl font-bold mb-6 leading-tight">
 						How Suibuy Fixes This
 					</h2>
@@ -111,7 +111,7 @@ const About = () => {
 			{/* Third Section - Suibuy Key Features */}
 			<div className="flex items-center justify-between w-full">
 				{/* Left Side - Key Features List */}
-				<div className="w-1/2 pr-10">
+				<div className="w-1/2 pr-10 text-transparent bg-clip-text bg-gradient-to-r from-[#cbcbe7] to-[#80badb]">
 					<h2 className="text-5xl font-bold mb-6 leading-tight">
 						Suibuy Key Features
 					</h2>
@@ -149,7 +149,7 @@ const About = () => {
 						alt="Vendor Product 1"
 						width={250}
 						height={250}
-						className="rounded-lg shadow-lg"
+						className="rounded-lg shadow-lg hidden"
 					/>
 					<Image
 						src="/images/trust.png"
@@ -170,7 +170,7 @@ const About = () => {
 						alt="Vendor Product 4"
 						width={250}
 						height={250}
-						className="rounded-lg shadow-lg"
+						className="rounded-lg shadow-lg hidden"
 					/>
 				</div>
 			</div>
