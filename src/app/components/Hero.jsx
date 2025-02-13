@@ -45,8 +45,8 @@ import { loadSlim } from "tsparticles-slim";export default function Hero() {
 
 					{/* Explore Button */}
 					<Link
-						href="/explore"
-						className="mt-6 inline-flex items-center bg-black text-white px-6 py-3 rounded-lg text-lg font-semibold hover:bg-gray-800 transition"
+						href="/marketplace"
+						className="mt-6 inline-flex items-center bg-black text-white px-6 py-3 rounded-lg text-lg font-semibold hover:bg-gray-800 transition animate-bounce"
 					>
 						Start Selling Now
 					</Link>
