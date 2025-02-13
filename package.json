@@ -6,8 +6,7 @@
 		"dev": "next dev --turbopack",
 		"build": "next build",
 		"start": "next start",
-		"lint": "next lint",
-		"prebuild": "tsc --noEmit || exit 0"
+		"lint": "next lint"
 	},
 	"dependencies": {
 		"@mysten/sui": "^1.21.2",
