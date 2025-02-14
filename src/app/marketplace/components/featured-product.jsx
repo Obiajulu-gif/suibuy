@@ -1,4 +1,5 @@
 import Image from "next/image"
+import { ShoppingBag } from "lucide-react"; // Import shopping bag icon
 
 export function FeaturedProduct() {
   return (
@@ -19,8 +20,9 @@ export function FeaturedProduct() {
 								)
 							)}
 						</div>
-						<button className="bg-purple text-white px-6 py-2 rounded-md">
-							Buy Now!
+						<button className="bg-purple text-white px-6 py-2 rounded-md flex items-center justify-center space-x-2 animate-pulse">
+							<ShoppingBag className="w-5 h-5" /> {/* Shopping Bag Icon */}
+							<span>Buy Now!</span>
 						</button>
 					</div>
 					<div className="md:w-1/2">

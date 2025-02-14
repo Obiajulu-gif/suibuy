@@ -1,14 +1,14 @@
 "use client"; // Ensure client-side rendering
 
 import Link from "next/link";
-import { Smartphone, Monitor, Headphones, Camera, Gamepad } from "lucide-react";
+import { Shirt, Monitor, ShoppingCart, Home, Dumbbell } from "lucide-react";
 
 const categories = [
-	{ name: "Phones", icon: Smartphone, link: "/categories/phones" },
-	{ name: "Computers", icon: Monitor, link: "/categories/computers" },
-	{ name: "SmartWatch", icon: Headphones, link: "/categories/smartwatch" },
-	{ name: "Camera", icon: Camera, link: "/categories/camera" },
-	{ name: "Gaming", icon: Gamepad, link: "/categories/gaming" },
+	{ name: "Fashion", icon: Shirt, link: "/categories/fashion" },
+	{ name: "Electronics", icon: Monitor, link: "/categories/electronics" },
+	{ name: "Groceries", icon: ShoppingCart, link: "/categories/groceries" },
+	{ name: "Home & Office", icon: Home, link: "/categories/home-office" },
+	{ name: "Sport & Games", icon: Dumbbell, link: "/categories/sports-games" },
 ];
 
 export function CategoryBrowse() {

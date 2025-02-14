@@ -2,8 +2,9 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import { ChevronDown, ChevronRight, Circle, Apple } from "lucide-react";
-
+import Link from "next/link";
+import { ChevronDown, ChevronRight, Circle, Apple, Store } from "lucide-react";
+import { Shirt, Monitor, ShoppingCart, Home, Dumbbell } from "lucide-react";
 export function HeroBanner() {
 	// State for dropdown menu
 	const [openDropdown, setOpenDropdown] = useState(null);
@@ -16,51 +17,70 @@ export function HeroBanner() {
 		<div className="flex bg-[#2a2a72] text-white min-h-[400px]">
 			{/* Left Sidebar */}
 			<div className="w-1/4 bg-[#009ffd] p-8 border-r border-gray-200 hidden lg:block">
-				<ul className="space-y-3 text-black font-medium">
-					<li
-						className="flex justify-between items-center cursor-pointer hover:text-gray-200"
-						onClick={() => toggleDropdown("womens")}
-					>
-						<span>Woman’s Fashion</span>
-						<ChevronDown size={16} />
+				<ul className="space-y-6 text-black font-bold">
+					<li className="flex justify-between items-center cursor-pointer hover:text-gray-200">
+						<Link
+							href="/fashion"
+							className="flex items-center justify-between w-full"
+						>
+							<div className="flex items-center space-x-3">
+								<Shirt size={20} />
+								<span>Fashion</span>
+							</div>
+							<ChevronRight size={18} />
+						</Link>
 					</li>
-					{openDropdown === "womens" && (
-						<ul className="ml-4 space-y-2 text-gray-200">
-							<li className="hover:text-white cursor-pointer">Dresses</li>
-							<li className="hover:text-white cursor-pointer">Shoes</li>
-							<li className="hover:text-white cursor-pointer">Accessories</li>
-						</ul>
-					)}
 
-					<li
-						className="flex justify-between items-center cursor-pointer hover:text-gray-200"
-						onClick={() => toggleDropdown("mens")}
-					>
-						<span>Men’s Fashion</span>
-						<ChevronDown size={16} />
+					<li className="flex justify-between items-center cursor-pointer hover:text-gray-200">
+						<Link
+							href="/electronics"
+							className="flex items-center justify-between w-full"
+						>
+							<div className="flex items-center space-x-3">
+								<Monitor size={20} />
+								<span>Electronics</span>
+							</div>
+							<ChevronRight size={18} />
+						</Link>
 					</li>
-					{openDropdown === "mens" && (
-						<ul className="ml-4 space-y-2 text-gray-200">
-							<li className="hover:text-white cursor-pointer">T-Shirts</li>
-							<li className="hover:text-white cursor-pointer">Shoes</li>
-							<li className="hover:text-white cursor-pointer">Watches</li>
-						</ul>
-					)}
 
-					<li className="hover:text-gray-200 cursor-pointer">Electronics</li>
-					<li className="hover:text-gray-200 cursor-pointer">
-						Home & Lifestyle
+					<li className="flex justify-between items-center cursor-pointer hover:text-gray-200">
+						<Link
+							href="/groceries"
+							className="flex items-center justify-between w-full"
+						>
+							<div className="flex items-center space-x-3">
+								<ShoppingCart size={20} />
+								<span>Groceries</span>
+							</div>
+							<ChevronRight size={18} />
+						</Link>
 					</li>
-					<li className="hover:text-gray-200 cursor-pointer">Medicine</li>
-					<li className="hover:text-gray-200 cursor-pointer">
-						Sports & Outdoor
+
+					<li className="flex justify-between items-center cursor-pointer hover:text-gray-200">
+						<Link
+							href="/home-office"
+							className="flex items-center justify-between w-full"
+						>
+							<div className="flex items-center space-x-3">
+								<Home size={20} />
+								<span>Home & Office</span>
+							</div>
+							<ChevronRight size={18} />
+						</Link>
 					</li>
-					<li className="hover:text-gray-200 cursor-pointer">Baby’s & Toys</li>
-					<li className="hover:text-gray-200 cursor-pointer">
-						Groceries & Pets
-					</li>
-					<li className="hover:text-gray-200 cursor-pointer">
-						Health & Beauty
+
+					<li className="flex justify-between items-center cursor-pointer hover:text-gray-200">
+						<Link
+							href="/sports-games"
+							className="flex items-center justify-between w-full"
+						>
+							<div className="flex items-center space-x-3">
+								<Dumbbell size={20} />
+								<span>Sport & Games</span>
+							</div>
+							<ChevronRight size={18} />
+						</Link>
 					</li>
 				</ul>
 			</div>
@@ -76,15 +96,14 @@ export function HeroBanner() {
 							<span className="text-sm tracking-wide">iPhone 14 Series</span>
 						</div>
 
-						{/* Heading */}
 						<h1 className="text-5xl font-bold leading-tight">
 							Up to <span className="text-[#009ffd]">10% off</span> <br />{" "}
 							Voucher
 						</h1>
 
-						{/* Shop Now Button */}
-						<button className="mt-4 px-6 py-3 bg-[#009ffd] text-black rounded-full font-medium transition-all duration-300 hover:bg-[#0086da] flex items-center space-x-2">
-							<span>Shop Now</span> <ChevronRight size={18} />
+						<button className="mt-4 px-6 py-3 bg-[#009ffd] text-black rounded-full font-extrabold transition-all duration-300 hover:bg-[#0086da] flex items-center space-x-2 animate-pulse">
+							<span>Become a Merchant</span> <ChevronRight size={18} />{" "}
+							<Store size={25} />
 						</button>
 					</div>
 

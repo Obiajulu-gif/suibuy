@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Image from "next/image";
-import { Star } from "lucide-react";
+import { Star, ShoppingCart } from "lucide-react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -47,37 +47,38 @@ const products = [
 	},
 ];
 
-// Countdown Timer Logic
+// Countdown Timer Logic (FIXED)
 const getTimeLeft = (targetDate) => {
-  const difference = targetDate - new Date().getTime();
-  if (difference <= 0)
-    return { days: "00", hours: "00", minutes: "00", seconds: "00" };
+	const now = new Date().getTime();
+	const difference = targetDate - now;
 
-  return {
-    days: String(Math.floor(difference / (1000 * 60 * 60 * 24))).padStart(
-      2,
-      "0"
-    ),
-    hours: String(Math.floor((difference / (1000 * 60 * 60)) % 24)).padStart(
-      2,
-      "0"
-    ),
-    minutes: String(Math.floor((difference / (1000 * 60)) % 60)).padStart(
-      2,
-      "0"
-    ),
-    seconds: String(Math.floor((difference / 1000) % 60)).padStart(2, "0"),
-  };
+	if (difference <= 0)
+		return { days: "00", hours: "00", minutes: "00", seconds: "00" };
+
+	return {
+		days: String(Math.floor(difference / (1000 * 60 * 60 * 24))).padStart(
+			2,
+			"0"
+		),
+		hours: String(Math.floor((difference / (1000 * 60 * 60)) % 24)).padStart(
+			2,
+			"0"
+		),
+		minutes: String(Math.floor((difference / (1000 * 60)) % 60)).padStart(
+			2,
+			"0"
+		),
+		seconds: String(Math.floor((difference / 1000) % 60)).padStart(2, "0"),
+	};
 };
 
 export function FlashSales() {
-	const [timeLeft, setTimeLeft] = useState(
-		getTimeLeft(new Date().getTime() + 48 * 60 * 60 * 1000)
-	); // Countdown for 48 hours
+	const targetTime = new Date().getTime() + 48 * 60 * 60 * 1000; // 48 hours from now
+	const [timeLeft, setTimeLeft] = useState(getTimeLeft(targetTime));
 
 	useEffect(() => {
 		const interval = setInterval(() => {
-			setTimeLeft(getTimeLeft(new Date().getTime() + 48 * 60 * 60 * 1000));
+			setTimeLeft(getTimeLeft(targetTime));
 		}, 1000);
 		return () => clearInterval(interval);
 	}, []);
@@ -100,12 +101,12 @@ export function FlashSales() {
 	};
 
 	return (
-		<section className="py-12 bg-gradient-to-r text-white">
+		<section className="py-12 bg-black text-white">
 			<div className="container mx-auto px-4">
 				<div className="flex items-center justify-between mb-8">
 					{/* Left - Flash Sales Heading */}
 					<div>
-						<h2 className="text-[#009ffd] font-medium mb-1">Today's</h2>
+						<h2 className="text-[#009ffd] font-bold mb-1">Today's</h2>
 						<h3 className="text-3xl font-semibold">Flash Sales</h3>
 					</div>
 
@@ -113,7 +114,7 @@ export function FlashSales() {
 					<div className="flex space-x-4">
 						{["Days", "Hours", "Minutes", "Seconds"].map((label, i) => (
 							<div key={label} className="flex flex-col items-center">
-								<div className="text-2xl font-bold bg-white text-[#2a2a72] px-3 py-1 rounded">
+								<div className="text-2xl font-bold bg-[#2a2a72] text-white px-3 py-1 rounded">
 									{Object.values(timeLeft)[i]}
 								</div>
 								<span className="text-xs">{label}</span>
@@ -165,8 +166,10 @@ export function FlashSales() {
 									</div>
 
 									{/* Add to Cart Button */}
-									<button className="mt-4 w-full bg-blue-600 hover:bg-blue-800 text-white font-bold py-2 rounded-lg">
-										Add To Cart
+									<button className="mt-4 w-full bg-[#009ffd] hover:bg-[#2a2a72] text-white font-bold py-2 rounded-lg flex items-center justify-center space-x-2">
+										<ShoppingCart className="w-5 h-5" />{" "}
+										{/* Shopping Cart Icon */}
+										<span>Add To Cart</span>
 									</button>
 								</div>
 							</div>

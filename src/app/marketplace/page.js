@@ -1,3 +1,4 @@
+import Navbar from "../components/Navbar";
 import { HeroBanner } from "./components/hero-banner";
 import { FlashSales } from "./components/flash-sales";
 import { CategoryBrowse } from "./components/category-browse";
@@ -11,6 +12,7 @@ import {Footer} from "./components/footer";
 export default function Home() {
 	return (
 		<div className="flex min-h-screen flex-col">
+			<Navbar />
 			<main className="flex-1">
 				<HeroBanner />
 				<FlashSales />
