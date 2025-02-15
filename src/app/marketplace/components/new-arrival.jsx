@@ -4,25 +4,25 @@ const arrivals = [
 	{
 		title: "PlayStation 5",
 		description: "Black and White version of the PS5 coming out on sale.",
-		image: "/images/playstation.png",
+		image: "/images/marketplace/playstation.png",
 		size: "lg",
 	},
 	{
 		title: "Women's Collections",
 		description: "Featured woman collections that give you another vibe.",
-		image: "/images/woman-collection.png",
+		image: "/images/marketplace/woman-collection.png",
 		size: "md",
 	},
 	{
 		title: "Speakers",
 		description: "Amazon wireless speakers",
-		image: "/images/three-speaker.png",
+		image: "/images/marketplace/three-speaker.png",
 		size: "sm",
 	},
 	{
 		title: "Perfume",
 		description: "GUCCI INTENSE OUD EDP",
-		image: "/images/perfume.png",
+		image: "/images/marketplace/perfume.png",
 		size: "sm",
 	},
 ];
