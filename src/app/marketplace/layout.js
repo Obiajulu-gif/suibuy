@@ -2,7 +2,7 @@ import React from "react"; // Import React
 
 
 export const metadata = {
-  title: "Exclusive - E-commerce",
+  title: "Marketplace - E-commerce",
   description: "Your one-stop shop for all things exclusive",
 };
 

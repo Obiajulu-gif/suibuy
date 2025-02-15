@@ -20,7 +20,7 @@ export function HeroBanner() {
 				<ul className="space-y-6 text-black font-bold">
 					<li className="flex justify-between items-center cursor-pointer hover:text-gray-200">
 						<Link
-							href="/fashion"
+							href="/marketplace/fashion"
 							className="flex items-center justify-between w-full"
 						>
 							<div className="flex items-center space-x-3">
@@ -33,7 +33,7 @@ export function HeroBanner() {
 
 					<li className="flex justify-between items-center cursor-pointer hover:text-gray-200">
 						<Link
-							href="/electronics"
+							href="/marketplace/electronics"
 							className="flex items-center justify-between w-full"
 						>
 							<div className="flex items-center space-x-3">
@@ -46,7 +46,7 @@ export function HeroBanner() {
 
 					<li className="flex justify-between items-center cursor-pointer hover:text-gray-200">
 						<Link
-							href="/groceries"
+							href="/marketplace/groceries"
 							className="flex items-center justify-between w-full"
 						>
 							<div className="flex items-center space-x-3">
@@ -59,7 +59,7 @@ export function HeroBanner() {
 
 					<li className="flex justify-between items-center cursor-pointer hover:text-gray-200">
 						<Link
-							href="/home-office"
+							href="/marketplace/home-office"
 							className="flex items-center justify-between w-full"
 						>
 							<div className="flex items-center space-x-3">
@@ -72,7 +72,7 @@ export function HeroBanner() {
 
 					<li className="flex justify-between items-center cursor-pointer hover:text-gray-200">
 						<Link
-							href="/sports-games"
+							href="/marketplace/sport-games"
 							className="flex items-center justify-between w-full"
 						>
 							<div className="flex items-center space-x-3">
@@ -110,7 +110,7 @@ export function HeroBanner() {
 					{/* Image Section */}
 					<div className="relative w-1/2 h-[350px] hidden md:block">
 						<Image
-							src="/images/iphone.png" // Replace with actual image path
+							src="/images/marketplace/iphone.png" // Replace with actual image path
 							alt="iPhone 14"
 							fill
 							className="object-contain"

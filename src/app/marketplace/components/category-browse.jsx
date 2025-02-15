@@ -4,11 +4,11 @@ import Link from "next/link";
 import { Shirt, Monitor, ShoppingCart, Home, Dumbbell } from "lucide-react";
 
 const categories = [
-	{ name: "Fashion", icon: Shirt, link: "/categories/fashion" },
-	{ name: "Electronics", icon: Monitor, link: "/categories/electronics" },
-	{ name: "Groceries", icon: ShoppingCart, link: "/categories/groceries" },
-	{ name: "Home & Office", icon: Home, link: "/categories/home-office" },
-	{ name: "Sport & Games", icon: Dumbbell, link: "/categories/sports-games" },
+	{ name: "Fashion", icon: Shirt, link: "/marketplace/fashion" },
+	{ name: "Electronics", icon: Monitor, link: "/marketplace/electronics" },
+	{ name: "Groceries", icon: ShoppingCart, link: "/marketplace/groceries" },
+	{ name: "Home & Office", icon: Home, link: "/marketplace/home-office" },
+	{ name: "Sport & Games", icon: Dumbbell, link: "/marketplace/sport-games" },
 ];
 
 export function CategoryBrowse() {
