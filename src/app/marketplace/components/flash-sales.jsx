@@ -15,7 +15,7 @@ const products = [
 		price: 120,
 		originalPrice: 160,
 		rating: 5,
-		image: "/images/gamepad.png",
+		image: "/images/marketplace/gamepad.png",
 		discount: "-40%",
 	},
 	{
@@ -24,7 +24,7 @@ const products = [
 		price: 960,
 		originalPrice: 1160,
 		rating: 4,
-		image: "/images/keyboard.png",
+		image: "/images/marketplace/keyboard.png",
 		discount: "-35%",
 	},
 	{
@@ -33,7 +33,7 @@ const products = [
 		price: 370,
 		originalPrice: 400,
 		rating: 5,
-		image: "/images/monitor.png",
+		image: "/images/marketplace/monitor.png",
 		discount: "-30%",
 	},
 	{
@@ -42,7 +42,7 @@ const products = [
 		price: 375,
 		originalPrice: 400,
 		rating: 4,
-		image: "/images/chair.png",
+		image: "/images/marketplace/chair.png",
 		discount: "-25%",
 	},
 ];

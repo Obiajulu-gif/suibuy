@@ -27,7 +27,7 @@ export function FeaturedProduct() {
 					</div>
 					<div className="md:w-1/2">
 						<Image
-							src="/images/big-speaker.png"
+							src="/images/marketplace/big-speaker.png"
 							alt="JBL Speaker"
 							width={500}
 							height={300}

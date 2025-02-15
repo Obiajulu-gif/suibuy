@@ -11,7 +11,7 @@ const products = [
 		price: 260,
 		originalPrice: 360,
 		rating: 5,
-		image: "/images/coat.png",
+		image: "/images/marketplace/coat.png",
 	},
 	{
 		id: 2,
@@ -19,7 +19,7 @@ const products = [
 		price: 960,
 		originalPrice: 1160,
 		rating: 4,
-		image: "/images/bag.png",
+		image: "/images/marketplace/bag.png",
 	},
 	{
 		id: 3,
@@ -27,7 +27,7 @@ const products = [
 		price: 160,
 		originalPrice: 170,
 		rating: 4,
-		image: "/images/speaker.png",
+		image: "/images/marketplace/speaker.png",
 	},
 	{
 		id: 4,
@@ -35,7 +35,7 @@ const products = [
 		price: 360,
 		originalPrice: 400,
 		rating: 5,
-		image: "/images/bookshelf.png",
+		image: "/images/marketplace/bookshelf.png",
 	},
 ];
 
