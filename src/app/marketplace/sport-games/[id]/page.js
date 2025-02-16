@@ -32,7 +32,7 @@ export default function ProductDetailPage({ params }) {
 					width={500}
 					height={500}
 					className="rounded-lg"
-					quality={100}
+					quality={80}
 				/>
 				<div className="flex mt-4 space-x-2">
 					<Image

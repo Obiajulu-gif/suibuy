@@ -36,11 +36,10 @@ export default function HomeOfficePage() {
 									quality={100}
 								/>
 							</div>
-
 							{/* Product Details */}
 							<div className="p-6">
 								<div className="flex items-center justify-between">
-									<h3 className="text-gray-800 text-xl font-medium">
+									<h3 className="text-purple font-bold text-xl ">
 										{product.title}
 									</h3>
 									<FaArrowRight className="text-gray-500 w-6 h-6" />

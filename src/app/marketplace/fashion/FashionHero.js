@@ -1,9 +1,10 @@
+import React, { memo } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { products } from "./products";
-import { FaShoppingCart, FaReact } from "react-icons/fa";
+import { FaShoppingCart } from "react-icons/fa";
 
-export default function FashionHero() {
+const FashionHero = () => {
 	return (
 		<div className="min-h-screen mx-auto p-4 bg-gradient-to-r from-purple to-indigo-500">
 			<header className="mb-8 space-x-2">
@@ -11,6 +12,7 @@ export default function FashionHero() {
 					Fashion Marketplace
 				</h1>
 			</header>
+
 			<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
 				{products.map((product) => (
 					<Link
@@ -27,6 +29,7 @@ export default function FashionHero() {
 								quality={100}
 							/>
 						</div>
+
 						<div className="p-4">
 							<div className="flex justify-between items-center">
 								<h3 className="text-purple font-semibold text-xl">
@@ -43,4 +46,7 @@ export default function FashionHero() {
 			</div>
 		</div>
 	);
-}
+};
+
+// Wrapping with `React.memo()` to optimize performance
+export default memo(FashionHero);

@@ -22,16 +22,14 @@ export default function Navbar() {
 	return (
 		<>
 			{/* Navbar Wrapper (Prevents Overflow) */}
-			<div className="w-full overflow-hidden">
+			<div className="w-full  bg-transparent overflow-hidden">
 				{/* Navbar */}
 				<nav
-					className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
-						isScrolled
-							? "bg-black/70 backdrop-blur-md shadow-lg"
-							: "bg-transparent"
+					className={`fixed  top-2 left-0 w-full z-50 transition-all duration-300 ${
+						isScrolled ? " bg-transparent " : ""
 					}`}
 				>
-					<div className="w-full max-w-7xl mx-auto flex items-center justify-between py-3 px-4 md:px-6 border border-blue-500 rounded-full">
+					<div className="w-full  bg-black max-w-7xl mx-auto flex items-center justify-between py-3 px-4 md:px-6 border border-blue-500 rounded-full">
 						{/* Logo */}
 						<Link href="/">
 							<div className="flex items-center space-x-4">
@@ -145,7 +143,7 @@ export default function Navbar() {
 				</div>
 
 				{/* Margin to prevent overlap */}
-				<div className="mt-20 md:mt-24"></div>
+				<div className="mt-24 md:mt-28"></div>
 			</div>
 		</>
 	);

@@ -1,79 +1,92 @@
 export const products = [
 	{
 		id: 1,
-		title: "Tennis",
+		title: "🎾 Tennis Equipment",
 		image: "/images/games/tennis.jpg",
-		description:
-			"Explore the world of tennis with high-quality equipment and techniques.",
-		details:
-			"Tennis is a racket sport that can be played individually against a single opponent or between two teams of two players each. Master your serves and volleys with our premium tennis gear.",
+		price: "₦50,000",
+		description: "Premium rackets and accessories for all skill levels.",
+		shippingInfo: ["Ships within 3-5 days"],
+		paymentInfo: "Cash on delivery or online payment",
+		returnInfo: "Return within 7 days of purchase",
 	},
 	{
 		id: 2,
-		title: "Football",
+		title: "⚽ Football Gear",
 		image: "/images/games/football.jpg",
-		description: "Football gear for professional and recreational players.",
-		details:
-			"Football, also known as soccer, is a globally popular team sport played with a spherical ball between two teams of 11 players. Score the winning goal with our collection of footballs, boots, and training gear.",
+		price: "₦30,000",
+		description: "High-quality footballs, boots, and training gear.",
+		shippingInfo: ["Ships within 2-4 days"],
+		paymentInfo: "Cash on delivery or online payment",
+		returnInfo: "Return within 7 days",
 	},
 	{
 		id: 3,
-		title: "Basketball",
+		title: "🏀 Basketball Equipment",
 		image: "/images/games/basketball.jpg",
-		description:
-			"Dribble your way to success with the latest basketball equipment.",
-		details:
-			"Basketball is a fast-paced team sport played on a rectangular court. Improve your shooting skills with our selection of basketballs and hoops designed for professionals and amateurs alike.",
+		price: "₦40,000",
+		description: "Professional basketballs, hoops, and accessories.",
+		shippingInfo: ["Ships within 3-6 days"],
+		paymentInfo: "Cash on delivery or online payment",
+		returnInfo: "Return within 7 days",
 	},
 	{
 		id: 4,
-		title: "PlayStation 5",
+		title: "🎮 PlayStation 5",
 		image: "/images/games/ps5.jpg",
-		description:
-			"The ultimate gaming experience awaits you with PlayStation 5.",
-		details:
-			"The PlayStation 5 (PS5) is Sony's next-gen gaming console, delivering an immersive gaming experience with cutting-edge graphics, faster load times, and exclusive titles. Experience gaming like never before.",
+		price: "₦700,000",
+		description: "Sony’s next-gen gaming console for ultimate gameplay.",
+		shippingInfo: ["Ships within 5-7 days"],
+		paymentInfo: "Online payment only",
+		returnInfo: "Return within 7 days if unopened",
 	},
 	{
 		id: 5,
-		title: "Handheld Games",
+		title: "🕹️ Handheld Gaming Consoles",
 		image: "/images/games/handgame.jpg",
-		description: "Enjoy handheld games anytime, anywhere.",
-		details:
-			"Handheld gaming consoles are portable devices that allow you to play video games on the go. Choose from a wide selection of handheld consoles and games for endless entertainment.",
+		price: "₦80,000",
+		description: "Portable consoles for gaming on the go.",
+		shippingInfo: ["Ships within 3-5 days"],
+		paymentInfo: "Cash on delivery or online payment",
+		returnInfo: "Return within 7 days",
 	},
 	{
 		id: 6,
-		title: "Table Tennis",
+		title: "🏓 Table Tennis Set",
 		image: "/images/games/table-tennis.jpg",
-		description: "Get ready for some intense table tennis action.",
-		details:
-			"Table tennis, also known as ping pong, is a fast-paced indoor sport played with small paddles and a lightweight ball. Our table tennis equipment is perfect for players of all levels, whether you're playing recreationally or competitively.",
+		price: "₦25,000",
+		description: "Complete table tennis setup for home and competition.",
+		shippingInfo: ["Ships within 2-4 days"],
+		paymentInfo: "Cash on delivery or online payment",
+		returnInfo: "Return within 7 days",
 	},
 	{
 		id: 7,
-		title: "Bowling",
+		title: "🎳 Bowling Equipment",
 		image: "/images/games/bowling.jpg",
-		description: "Strike every pin with precision and style.",
-		details:
-			"Bowling is a sport in which players roll a heavy ball down a lane to knock down pins. With our top-tier bowling balls and accessories, you can perfect your roll and enjoy a fun time with family or friends.",
+		price: "₦100,000",
+		description: "Premium bowling balls and accessories.",
+		shippingInfo: ["Ships within 4-6 days"],
+		paymentInfo: "Online payment only",
+		returnInfo: "Return within 7 days if unused",
 	},
-
+	{
+		id: 8,
+		title: "🎮 Gaming Controllers",
+		image: "/images/games/gamepad.jpg",
+		price: "₦35,000",
+		description: "High-performance controllers for PlayStation, Xbox & PC.",
+		shippingInfo: ["Ships within 3-5 days"],
+		paymentInfo: "Cash on delivery or online payment",
+		returnInfo: "Return within 7 days",
+	},
 	{
 		id: 9,
-		title: "Gaming Controllers",
-		image: "/images/games/gamepad.jpg",
-		description:
-			"Take control of your gaming with high-performance controllers.",
-		details:
-			"Enhance your gaming experience with our ergonomic gaming controllers, designed for precision and comfort. Whether you're playing on PlayStation, Xbox, or PC, we have the right controller for you.",
-	},
-	{
-		id: 10,
-		title: "Classic Game Cartridges",
+		title: "🕹️ Classic Game Cartridges",
 		image: "/images/games/sonic-game.jpg",
-		description: "Relive the nostalgia with classic gaming cartridges.",
-		details:
-			"Bring back the memories with retro gaming cartridges featuring your favorite titles like Sonic the Hedgehog and more. Our collection of vintage games is perfect for collectors and enthusiasts.",
+		price: "₦20,000",
+		description: "Relive nostalgic gaming moments with classic titles.",
+		shippingInfo: ["Ships within 3-5 days"],
+		paymentInfo: "Cash on delivery or online payment",
+		returnInfo: "Return within 7 days",
 	},
 ];
