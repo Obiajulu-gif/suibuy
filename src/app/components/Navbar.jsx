@@ -36,7 +36,7 @@ export default function Navbar() {
 						<Link href="/">
 							<div className="flex items-center space-x-4">
 								<img
-									src="/logo.png"
+									src="/images/logo.png"
 									alt="SUIBUY"
 									className="w-10 h-10 md:w-12 md:h-12"
 								/>
