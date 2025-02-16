@@ -1,88 +1,152 @@
 "use client"; // Needed for Next.js App Router
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { AiOutlineMenu, AiOutlineClose, AiOutlineUser } from "react-icons/ai";
 import Link from "next/link";
-import { Search, ShoppingCart, User } from "lucide-react";
+import { ShoppingCart } from "lucide-react";
 
 export default function Navbar() {
 	const [navOpen, setNavOpen] = useState(false);
+	const [isScrolled, setIsScrolled] = useState(false);
+
+	// Track scroll position for transparency effect
+	useEffect(() => {
+		const handleScroll = () => {
+			setIsScrolled(window.scrollY > 50);
+		};
+
+		window.addEventListener("scroll", handleScroll);
+		return () => window.removeEventListener("scroll", handleScroll);
+	}, []);
 
 	return (
-		<nav className="w-full flex justify-center bg-black py-3">
-			<div className="w-[95%] max-w-7xl bg-black border border-blue-500 rounded-full px-6 py-3 flex items-center justify-between">
-				<Link href="/">
-					<div className="flex items-center space-x-4">
-						<img src="/logo.png" alt="DecentraClasses" className="w-12 h-12" />
-						<div className="text-white">
-							<h1 className="text-2xl font-bold">SUIBUY</h1>
-							<p className="text-sm tracking-widest text-gray-400">
-								SAVE | EARN | GROW
-							</p>
+		<>
+			{/* Navbar Wrapper (Prevents Overflow) */}
+			<div className="w-full overflow-hidden">
+				{/* Navbar */}
+				<nav
+					className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
+						isScrolled
+							? "bg-black/70 backdrop-blur-md shadow-lg"
+							: "bg-transparent"
+					}`}
+				>
+					<div className="w-full max-w-7xl mx-auto flex items-center justify-between py-3 px-4 md:px-6 border border-blue-500 rounded-full">
+						{/* Logo */}
+						<Link href="/">
+							<div className="flex items-center space-x-4">
+								<img
+									src="/logo.png"
+									alt="SUIBUY"
+									className="w-10 h-10 md:w-12 md:h-12"
+								/>
+								<div className="text-white">
+									<h1 className="text-lg md:text-2xl font-bold">SUIBUY</h1>
+									<p className="text-xs md:text-sm tracking-widest text-gray-400">
+										SAVE | EARN | GROW
+									</p>
+								</div>
+							</div>
+						</Link>
+
+						{/* Desktop Navigation */}
+						<div className="hidden md:flex items-center space-x-8 font-bold text-[#009ffd]">
+							<Link href="/saving" className="text-lg">
+								Saving
+							</Link>
+							<Link href="/loan" className="text-lg">
+								Micro Loan
+							</Link>
+							<Link href="/marketplace" className="text-lg">
+								Marketplace
+							</Link>
+							<Link href="/about" className="text-lg">
+								About
+							</Link>
+						</div>
+
+						{/* Icons & Explore Button */}
+						<div className="flex items-center space-x-4 md:space-x-6">
+							<button className="p-2">
+								<ShoppingCart className="h-6 w-6 md:h-10 md:w-10 text-white" />
+							</button>
+							<AiOutlineUser className="text-white text-xl md:text-2xl cursor-pointer" />
+							<Link href="/explore">
+								<button className="hidden md:block bg-[#009ffd] hover:bg-[#2a2a72] text-white font-bold py-2 px-4 rounded-lg">
+									Explore Now
+								</button>
+							</Link>
+
+							{/* Mobile Menu Toggle */}
+							<button
+								className="md:hidden text-white"
+								onClick={() => setNavOpen(true)}
+							>
+								<AiOutlineMenu size={28} />
+							</button>
 						</div>
 					</div>
-				</Link>
+				</nav>
 
-				<div className="flex-1 flex justify-end text-blue">
-					<nav className="hidden md:flex items-center space-x-8 font-bold">
-						<Link href="/saving" className="text-lg">
-							Saving
-						</Link>
-						<Link href="/loan" className="text-lg">
-							Micro Loan
-						</Link>
-						<Link href="/marketplace" className="text-lg">
-							Marketplace
-						</Link>
-						<Link href="/about" className="text-lg">
-							About
-						</Link>
-					</nav>
-				</div>
-
-				<div className="flex items-center space-x-6 text-purple">
-					<button className="p-2">
-						<ShoppingCart className="h-10 w-10" />
-					</button>
-					<AiOutlineUser className="text-white text-2xl cursor-pointer" />
-				</div>
-				<button
-					className="md:hidden text-white"
-					onClick={() => setNavOpen(!navOpen)}
+				{/* Mobile Menu (Sliding from Right) */}
+				<div
+					className={`fixed top-0 right-0 h-full w-1/2 bg-black bg-opacity-95 text-white flex flex-col items-center py-6 z-50 transform ${
+						navOpen ? "translate-x-0" : "translate-x-full"
+					} transition-transform duration-300 ease-in-out`}
 				>
-					{navOpen ? true : <AiOutlineMenu size={28} />}
-				</button>
-			</div>
-
-			{/* Mobile Menu */}
-			{navOpen && (
-				<div className="absolute top-0 left-1/2 w-1/2 h-full bg-black bg-opacity-90 text-white flex flex-col items-center py-4 z-10 transition-all duration-300 ease-in-out">
 					<button
 						className="absolute top-4 right-4 text-white"
 						onClick={() => setNavOpen(false)}
 					>
 						<AiOutlineClose size={28} />
 					</button>
-					<ul className="flex flex-col space-y-4 text-lg font-bold mt-20">
-						<li className="hover:text-gray-400 cursor-pointer">
-							<Link href="/saving"> Saving</Link>
+
+					<ul className="w-full flex flex-col items-center space-y-6 text-lg font-bold mt-16">
+						<li className="w-full text-center">
+							<Link
+								href="/saving"
+								className="block py-2 w-full hover:bg-gray-800"
+							>
+								Saving
+							</Link>
 						</li>
-						<li className="hover:text-gray-400 cursor-pointer">
-							<Link href="/loan"> Micro Loan</Link>
+						<li className="w-full text-center">
+							<Link
+								href="/loan"
+								className="block py-2 w-full hover:bg-gray-800"
+							>
+								Micro Loan
+							</Link>
 						</li>
-						<li className="hover:text-gray-400 cursor-pointer">
-							<Link href="/marketplace"> Marketplace</Link>
+						<li className="w-full text-center">
+							<Link
+								href="/marketplace"
+								className="block py-2 w-full hover:bg-gray-800"
+							>
+								Marketplace
+							</Link>
 						</li>
-						<li className="hover:text-gray-400 cursor-pointer">
-							<Link href="/cohorts">About</Link>
+						<li className="w-full text-center">
+							<Link
+								href="/about"
+								className="block py-2 w-full hover:bg-gray-800"
+							>
+								About
+							</Link>
 						</li>
 					</ul>
-					<button className="mt-4 flex items-center bg-black text-white px-4 py-2 rounded-full border border-white">
-						⚡ <span className="ml-1">0 XP</span>
-					</button>
-					<AiOutlineUser className="text-white text-2xl cursor-pointer mt-2" />
+
+					{/* Mobile Explore Button */}
+					<Link href="/explore">
+						<button className="mt-6 bg-[#009ffd] hover:bg-[#2a2a72] text-white font-bold py-2 px-6 rounded-lg">
+							Explore Now
+						</button>
+					</Link>
 				</div>
-			)}
-		</nav>
+
+				{/* Margin to prevent overlap */}
+				<div className="mt-20 md:mt-24"></div>
+			</div>
+		</>
 	);
 }

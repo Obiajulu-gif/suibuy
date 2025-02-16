@@ -5,6 +5,9 @@ export const products = [
 		image: "/images/groceries/apple.jpg",
 		price: "₦200 per piece",
 		description: "Fresh and organic apple, perfect for a healthy snack.",
+		shippingInfo: ["Ships within 1-2 days"],
+		paymentInfo: "Cash on delivery or online payment",
+		returnInfo: "Return within 2 days if not fresh",
 	},
 	{
 		id: 2,
@@ -13,6 +16,9 @@ export const products = [
 		price: "₦1,500",
 		description:
 			"A healthy and delicious breakfast combo to kickstart your day.",
+		shippingInfo: ["Ships within 1-2 days"],
+		paymentInfo: "Cash on delivery or online payment",
+		returnInfo: "Return within 2 days if not fresh",
 	},
 	{
 		id: 3,
@@ -20,6 +26,9 @@ export const products = [
 		image: "/images/groceries/vegatable.jpg",
 		price: "₦500 per kg",
 		description: "A variety of fresh and organic vegetables for your meals.",
+		shippingInfo: ["Ships within 1-2 days"],
+		paymentInfo: "Cash on delivery or online payment",
+		returnInfo: "Return within 2 days if not fresh",
 	},
 	{
 		id: 4,
@@ -28,6 +37,9 @@ export const products = [
 		price: "₦3,000",
 		description:
 			"A colorful assortment of seasonal fruits for a balanced diet.",
+		shippingInfo: ["Ships within 1-2 days"],
+		paymentInfo: "Cash on delivery or online payment",
+		returnInfo: "Return within 2 days if not fresh",
 	},
 	{
 		id: 5,
@@ -35,13 +47,8 @@ export const products = [
 		image: "/images/groceries/pepper.jpg",
 		price: "₦400 per kg",
 		description: "Fresh and crispy red and yellow bell peppers.",
-	},
-	{
-		id: 6,
-		title: "Breakfast Combo",
-		image: "/images/groceries/breakfast.jpg",
-		price: "₦1,500",
-		description:
-			"A healthy and delicious breakfast combo to kickstart your day.",
-	},
+		shippingInfo: ["Ships within 1-2 days"],
+		paymentInfo: "Cash on delivery or online payment",
+		returnInfo: "Return within 2 days if not fresh",
+	}
 ];

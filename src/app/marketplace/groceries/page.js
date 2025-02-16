@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { FaReact, FaShoppingBag } from "react-icons/fa"; // added product icon
+import { FaShoppingBag } from "react-icons/fa"; // added product icon
 import { products } from "./products";
 
 export default function GroceriesPage() {
@@ -16,16 +16,16 @@ export default function GroceriesPage() {
 					</p>
 				</header>
 				<div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-					{products.map((grocery) => (
+					{products.map((product) => (
 						<Link
-							href={`/marketplace/groceries/${grocery.id}`}
-							key={grocery.id}
+							href={`/marketplace/groceries/${product.id}`}
+							key={product.id}
 							className="group block bg-white rounded-xl overflow-hidden shadow-lg transform transition duration-300 hover:scale-105 hover:shadow-2xl"
 						>
 							<div className="relative h-56">
 								<Image
-									src={grocery.image}
-									alt={grocery.title}
+									src={product.image}
+									alt={product.title}
 									fill
 									className="object-cover w-full h-full transition-transform duration-300 group-hover:scale-110"
 									quality={100}
@@ -33,16 +33,17 @@ export default function GroceriesPage() {
 							</div>
 							<div className="p-6">
 								<div className="flex items-center gap-2 mb-2">
-									<FaShoppingBag size={20} className="text-green-500" /> {/* product icon */}
+									<FaShoppingBag size={20} className="text-green-500" />{" "}
+									{/* product icon */}
 									<h3 className="text-xl font-semibold text-purple-700 group-hover:text-indigo-600 transition-colors">
-										{grocery.title}
+										{product.title}
 									</h3>
 								</div>
 								<p className="text-lg font-bold text-gray-800 mb-2">
-									{grocery.price}
+									{product.price}
 								</p>
 								<p className="text-gray-600 line-clamp-3">
-									{grocery.description}
+									{product.description}
 								</p>
 							</div>
 						</Link>
