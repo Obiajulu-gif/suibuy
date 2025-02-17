@@ -44,11 +44,11 @@ export const particlesOptions = {
 		},
 		modes: {
 			attract: {
-				distance: 200,
+				distance: 500,
 				duration: 0.4,
 				easing: "ease-out-quad",
 				factor: 1,
-				maxSpeed: 50,
+				maxSpeed: 30,
 				speed: 1,
 			},
 			bounce: {

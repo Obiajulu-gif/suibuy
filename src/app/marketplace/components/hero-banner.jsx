@@ -16,8 +16,8 @@ export function HeroBanner() {
 	return (
 		<div className="flex bg-[#2a2a72] text-white min-h-[400px]">
 			{/* Left Sidebar */}
-			<div className="w-1/4 bg-[#009ffd] p-8 border-r border-gray-200 hidden lg:block">
-				<ul className="space-y-6 text-black font-bold">
+			<div className="w-1/4 bg-[#1593db] p-8 border-r border-gray-200 hidden lg:block">
+				<ul className="space-y-6  font-bold">
 					<li className="flex justify-between items-center cursor-pointer hover:text-gray-200">
 						<Link
 							href="/marketplace/fashion"
@@ -101,7 +101,7 @@ export function HeroBanner() {
 							Voucher
 						</h1>
 
-						<button className="mt-4 px-6 py-3 bg-[#009ffd] text-black rounded-full font-extrabold transition-all duration-300 hover:bg-[#0086da] flex items-center space-x-2 animate-pulse">
+						<button className="mt-4 px-6 py-3 bg-[#009ffd] text-white rounded-full font-extrabold transition-all duration-300 hover:bg-[#0086da] flex items-center space-x-2 animate-pulse">
 							<span>Become a Merchant</span> <ChevronRight size={18} />{" "}
 							<Store size={25} />
 						</button>

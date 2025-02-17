@@ -8,11 +8,10 @@ import { ExploreProducts } from "./components/explore-products";
 import { NewArrival } from "./components/new-arrival";
 import { Services } from "./components/services";
 import {Footer} from "./components/footer";
-
 export default function Home() {
 	return (
 		<div className="flex min-h-screen flex-col">
-			<Navbar />
+			{/* <Navbar /> */}
 			<main className="flex-1">
 				<HeroBanner />
 				<FlashSales />
