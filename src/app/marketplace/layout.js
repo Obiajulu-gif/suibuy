@@ -1,5 +1,5 @@
 import React from "react";
-import Header from "../components/Header";  // ✅ If layout.js is inside src/app/marketplace
+import Header from "./components/Header";  // ✅ If layout.js is inside src/app/marketplace
 
 export const metadata = {
 	title: "Marketplace - E-commerce",
