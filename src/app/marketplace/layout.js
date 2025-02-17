@@ -1,5 +1,7 @@
 import React from "react";
-import Header from "./components/Header"
+import Header from "./components/Header"; // Ensure correct path
+import Head from "next/head"; // ✅ Use Next.js Head component
+
 export const metadata = {
 	title: "Marketplace - E-commerce",
 	description: "Your one-stop shop for all things exclusive",
@@ -7,15 +9,15 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
 	return (
-		<html lang="en">
-			<head>
+		<>
+			<Head>
 				<title>{metadata.title}</title>
 				<meta name="description" content={metadata.description} />
-			</head>
-			<body>
+			</Head>
+			<div>
 				<Header /> {/* ✅ Ensures Header is always visible */}
 				<main>{children}</main> {/* ✅ Ensures all pages render properly */}
-			</body>
-		</html>
+			</div>
+		</>
 	);
 }
