@@ -1,5 +1,5 @@
 import React from "react";
-import Header from "./components/Header"; // Ensure correct path
+// import Header from "./components/Header"; // Ensure correct path
 import Head from "next/head"; // ✅ Use Next.js Head component
 
 export const metadata = {
@@ -15,7 +15,7 @@ export default function RootLayout({ children }) {
 				<meta name="description" content={metadata.description} />
 			</Head>
 			<div>
-				<Header /> {/* ✅ Ensures Header is always visible */}
+				{/* <Header /> ✅ Ensures Header is always visible */}
 				<main>{children}</main> {/* ✅ Ensures all pages render properly */}
 			</div>
 		</>
