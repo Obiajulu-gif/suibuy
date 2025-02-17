@@ -8,7 +8,7 @@ import { FaTshirt, FaHome, FaGamepad, FaUtensils } from "react-icons/fa";
 import { HiMenu, HiX } from "react-icons/hi";
 import { motion } from "framer-motion"; // For animations
 
-const Header = () => {
+const Navbar = () => {
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
 
 	const toggleMenu = () => {
@@ -141,4 +141,4 @@ const Header = () => {
 	);
 };
 
-export default Header;
+export default Navbar;
