@@ -4,9 +4,9 @@ import React from "react"
 import { FaChevronDown } from "react-icons/fa"
 
 const CHAINS = [
+    { id: "sui", name: "Sui", symbol: "SUI", icon: SuiIcon, color: "bg-[#6FBCF0]" },
     { id: "btc", name: "Bitcoin", symbol: "BTC", icon: BitcoinIcon, color: "bg-[#F7931A]" },
     { id: "eth", name: "Ethereum", symbol: "ETH", icon: EthereumIcon, color: "bg-[#627EEA]" },
-    { id: "sui", name: "Sui", symbol: "SUI", icon: SuiIcon, color: "bg-[#6FBCF0]" },
     { id: "sol", name: "Solana", symbol: "SOL", icon: SolanaIcon, color: "bg-[#9945FF]" },
 ]
 
@@ -315,7 +315,7 @@ export default function LoanInterface() {
 										<div className="bg-gray-800 rounded-xl p-4 flex items-center justify-between shadow-sm">
 											<div className="flex items-center gap-3">
 												<div className="w-8 h-8 rounded-full bg-yellow-500/10 flex items-center justify-center">
-													<div className="w-5 h-5 rounded-full border-2 border-yellow-500" />
+													<div className="w-5 h-5 rounded-full border-2 border-purple" />
 												</div>
 												<span className="text-sm">
 													Excess Collateral Release
@@ -330,7 +330,7 @@ export default function LoanInterface() {
 										<div className="bg-gray-800 rounded-xl p-4 flex items-center justify-between shadow-sm">
 											<div className="flex items-center gap-3">
 												<div className="w-8 h-8 rounded-full bg-yellow-500/10 flex items-center justify-center">
-													<div className="w-5 h-5 rounded-full border-2 border-yellow-500" />
+													<div className="w-5 h-5 rounded-full border-2 border-purple" />
 												</div>
 												<span className="text-sm">
 													Automatic Margin Call Management
@@ -399,13 +399,13 @@ export default function LoanInterface() {
 							<div className="flex gap-3">
 								<button
 									type="button"
-									className="flex-1 border border-yellow-500/20 hover:bg-yellow-500/10 text-yellow-500 rounded py-2 transition-colors"
+									className="flex-1 border border-white hover:bg-yellow-500/10 text-blue rounded py-2 transition-colors"
 								>
 									Zero Risk Loans
 								</button>
 								<button
 									type="button"
-									className="flex-1 bg-yellow-500 hover:bg-yellow-600 text-black rounded py-2 transition-colors"
+									className="flex-1 bg-purple hover:bg-blue text-white rounded py-2 transition-colors"
 								>
 									Get A Loan
 								</button>
@@ -414,14 +414,14 @@ export default function LoanInterface() {
 								<button
 									type="button"
 									onClick={transferFunds}
-									className="flex-1 border border-yellow-500/20 hover:bg-yellow-500/10 text-yellow-500 rounded py-2 transition-colors"
+									className="flex-1 border border-white hover:bg-yellow-500/10 text-blue rounded py-2 transition-colors"
 								>
 									Transfer Funds
 								</button>
 								<button
 									type="button"
 									onClick={collectCollateral}
-									className="flex-1 bg-yellow-500 hover:bg-yellow-600 text-black rounded py-2 transition-colors"
+									className="flex-1 bg-purple hover:bg-blue text-white rounded py-2 transition-colors"
 								>
 									Collect Collateral
 								</button>
