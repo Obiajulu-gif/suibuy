@@ -40,12 +40,8 @@ const FAQ = () => {
 					<h2 className="text-4xl font-bold text-gray-200">
 						Do You Have Any Questions?
 					</h2>
-					<p className="text-gray-300 mt-3 text-lg">
-						Lorem ipsum dolor sit amet consectetur. Pellentesque mauris
-						adipiscing amet est quisque. Vitae eros laoreet dui tempor fringilla
-						fringilla pharetra pharetra.
-					</p>
-					<button className="mt-6 px-6 py-3 bg-[#ff9800] text-white rounded-lg shadow-lg hover:bg-[#e68a00] transition">
+					
+					<button className="mt-6 px-6 py-3 bg-purple text-white rounded-lg shadow-lg hover:bg-[#e68a00] transition">
 						Contact Us
 					</button>
 				</div>
