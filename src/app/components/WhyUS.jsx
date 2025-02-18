@@ -6,7 +6,7 @@ import { FaStore, FaPiggyBank, FaMoneyCheckAlt } from "react-icons/fa"; // ✅ I
 
 export default function WhyUs() {
 	return (
-		<div className="min-h-screen bg-gradient-to-b from-[#000c24] to-[#001e4d] flex flex-col items-center justify-center p-6">
+		<div className="min-h-screen bg-gradient-to-r from-[#000c24] to-[#001e4d] flex flex-col items-center justify-center p-6">
 			<div className="w-full max-w-6xl">
 				{/* Section Title */}
 				<h1 className="text-4xl md:text-5xl font-extrabold text-white text-center mb-12 uppercase">

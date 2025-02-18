@@ -22,7 +22,7 @@ export default function Navbar() {
 	return (
 		<>
 			{/* Navbar Wrapper (Prevents Overflow) */}
-			<div className="w-full  bg-transparent overflow-hidden">
+			<div className="w-full  bg-transparent overflow-hidden bg-gradient-to-r from-[#000c24] to-[#001e4d]">
 				{/* Navbar */}
 				<nav
 					className={`fixed  top-2 left-0 w-full z-50 transition-all duration-300 ${

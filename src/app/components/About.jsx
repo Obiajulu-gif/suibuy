@@ -15,7 +15,7 @@ import {
 
 const About = () => {
 	return (
-		<section className="relative flex flex-col items-center px-6 md:px-16 py-16 text-white">
+		<section className="relative  bg-gradient-to-r from-[#000c24] to-[#001e4d] flex flex-col items-center px-6 md:px-16 py-16 text-white">
 			{/* First Section - About Suibuy */}
 			<div className="flex flex-col md:flex-row items-center justify-between w-full mb-20">
 				{/* Left Section (Text) */}
@@ -41,7 +41,7 @@ const About = () => {
 						alt="Suibuy Marketplace"
 						width={400}
 						height={250}
-						className="rounded-lg shadow-lg"
+						className="rounded-lg "
 					/>
 				</div>
 			</div>
@@ -91,60 +91,7 @@ const About = () => {
 				</div>
 			</div>
 
-			{/* Third Section - Suibuy Key Features */}
-			<div className="flex flex-col md:flex-row items-start justify-between w-full">
-				{/* Left Side - Key Features List */}
-				<div className="w-full md:w-1/2 md:pr-10 text-center md:text-left">
-					<h2 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
-						Suibuy Key Features
-					</h2>
-					<ul className="text-gray-300 text-lg md:text-xl leading-relaxed space-y-6">
-						<li className="flex items-center justify-center md:justify-start">
-							<FaShoppingCart className="text-purple-400 mr-4 text-2xl md:text-3xl" />
-							Decentralized Vendor & Product Listings
-						</li>
-						<li className="flex items-center justify-center md:justify-start">
-							<FaBolt className="text-yellow-400 mr-4 text-2xl md:text-3xl" />
-							Trustless Payments (SUI & Stablecoins)
-						</li>
-					</ul>
-					<button className="mt-6 px-6 py-3 bg-purple-600 rounded-lg text-white hover:bg-purple-800 transition">
-						Join the Marketplace →
-					</button>
-				</div>
-
-				{/* Right Side - Custom Images Grid */}
-				<div className="grid grid-cols-2 md:grid-cols-2 gap-6 w-full md:w-1/2 mt-10 md:mt-0">
-					<Image
-						src="/images/decentralize.png"
-						alt="Vendor Product 1"
-						width={200}
-						height={200}
-						className="rounded-lg shadow-lg"
-					/>
-					<Image
-						src="/images/trust.png"
-						alt="Vendor Product 2"
-						width={200}
-						height={200}
-						className="rounded-lg shadow-lg"
-					/>
-					<Image
-						src="/images/sui.png"
-						alt="Vendor Product 3"
-						width={200}
-						height={200}
-						className="rounded-lg shadow-lg"
-					/>
-					<Image
-						src="/images/custom-image4.png"
-						alt="Vendor Product 4"
-						width={200}
-						height={200}
-						className="rounded-lg shadow-lg"
-					/>
-				</div>
-			</div>
+			
 		</section>
 	);
 };

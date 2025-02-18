@@ -13,10 +13,10 @@ export default function Home() {
 		<div>
 			<Navbar />
 			<Hero />
-			<CardDesc/>
-			<WhyUs/>
-			<WhySuibuy />
 			<About />
+			<CardDesc/>
+			<WhySuibuy />
+			<WhyUs/>
 			<Services />
 			<FAQ />
 

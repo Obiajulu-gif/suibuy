@@ -33,7 +33,7 @@ export default function CardDesc() {
   ];
 
   return (
-		<div className="min-h-screen bg-gradient-to-b from-[#000c24] to-[#001e4d] flex flex-col items-center justify-center overflow-hidden">
+		<div className="min-h-screen bg-gradient-to-r from-[#000c24] to-[#001e4d] flex flex-col items-center justify-center overflow-hidden">
 			<h1 className="text-4xl md:text-5xl font-bold text-white mb-20 text-center px-4">
 				SUIBUY is for Marketplace, Saving & Loans
 			</h1>

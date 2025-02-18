@@ -12,7 +12,7 @@ import { loadSlim } from "tsparticles-slim";export default function Hero() {
 		}, []);
 
 	return (
-		<section className="w-full flex flex-col items-center justify-center py-8 px-6 bg-black">
+		<section className="bg-gradient-to-r from-[#000c24] to-[#001e4d] w-full flex flex-col items-center justify-center py-8 px-6 bg-black">
 			{/* Hero Content */}
 			<div className="relative max-w-7xl w-full bg-gradient-to-r from-[#2a2a72] to-[#009ffd] rounded-3xl p-14 text-white overflow-hidden">
 				{/* Particle Background */}
@@ -90,7 +90,7 @@ function StatBox({ number, label }) {
 			initial={{ opacity: 0, y: 20 }}
 			animate={{ opacity: 1, y: 0 }}
 			transition={{ duration: 0.8 }}
-			className="flex-1 text-center text-white py-6 px-4 bg-gradient-to-r from-[#111] to-[#222] rounded-xl mx-2"
+			className=" bg-gradient-to-r from-[#000c24] to-[#001e4d] flex-1 text-center text-white py-6 px-4 rounded-xl mx-2"
 		>
 			<h2 className="text-2xl font-bold">{count.toLocaleString()}+</h2>
 			<p className="text-gray-400 uppercase">{`{ ${label} }`}</p>

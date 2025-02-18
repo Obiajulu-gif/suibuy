@@ -1,13 +1,14 @@
 "use client"
 
 import React from "react"
-import { FaChevronDown } from "react-icons/fa"
+import { FaChevronDown, FaBitcoin, FaEthereum } from "react-icons/fa"
+import { SiSolana } from "react-icons/si"
 
 const CHAINS = [
-    { id: "sui", name: "Sui", symbol: "SUI", icon: SuiIcon, color: "bg-[#6FBCF0]" },
-    { id: "btc", name: "Bitcoin", symbol: "BTC", icon: BitcoinIcon, color: "bg-[#F7931A]" },
-    { id: "eth", name: "Ethereum", symbol: "ETH", icon: EthereumIcon, color: "bg-[#627EEA]" },
-    { id: "sol", name: "Solana", symbol: "SOL", icon: SolanaIcon, color: "bg-[#9945FF]" },
+	{ id: "sui", name: "Sui", symbol: "SUI", icon: SuiIcon, color: "bg-[#6FBCF0]" },
+	{ id: "btc", name: "Bitcoin", symbol: "BTC", icon: FaBitcoin, color: "bg-[#F7931A]" },
+	{ id: "eth", name: "Ethereum", symbol: "ETH", icon: FaEthereum, color: "bg-[#627EEA]" },
+	{ id: "sol", name: "Solana", symbol: "SOL", icon: SiSolana, color: "bg-[#9945FF]" },
 ]
 
 const CURRENCY_OPTIONS = [
@@ -21,88 +22,60 @@ const CURRENCY_OPTIONS = [
 	{ value: "AUD", label: "💵 AUD (Australian Dollar)" },
 	{ value: "ZAR", label: "💵 ZAR (South African Rand)" },
 	{ value: "INR", label: "💵 INR (Indian Rupee)" },
-];
+]
 
-// Inline icon components
-function BitcoinIcon(props) {
-    return (
-        <svg viewBox="0 0 24 24" className="h-4 w-4" fill="currentColor" {...props}>
-            <circle cx="12" cy="12" r="10" />
-        </svg>
-    )
-}
-
-function EthereumIcon(props) {
-    return (
-        <svg viewBox="0 0 24 24" className="h-4 w-4" fill="currentColor" {...props}>
-            <polygon points="12,2 22,12 12,22 2,12" />
-        </svg>
-    )
-}
-
+// Sui icon remains custom
 function SuiIcon(props) {
-    return (
-        <svg viewBox="0 0 24 24" className="h-4 w-4" {...props}>
-            <path d="M12 24c6.627 0 12-5.373 12-12S18.627 0 12 0 0 5.373 0 12s5.373 12 12 12z" fill="#6FBCF0" />
-            <path
-                fillRule="evenodd"
-                clipRule="evenodd"
-                d="M7.373 4.877a.374.374 0 01.374-.374h7.954c.207 0 .374.168.374.374v2.374a.374.374 0 01-.374.374H7.747a.374.374 0 01-.374-.374V4.877zm0 4.123a.374.374 0 01.374-.374h7.954c.207 0 .374.168.374.374v2.374a.374.374 0 01-.374.374H7.747a.374.374 0 01-.374-.374V9zm0 4.123a.374.374 0 01.374-.374h7.954c.207 0 .374.168.374.374v2.374a.374.374 0 01-.374.374H7.747a.374.374 0 01-.374-.374V13.123z"
-                fill="#fff"
-            />
-        </svg>
-    )
-}
-
-function SolanaIcon(props) {
-    return (
-        <svg viewBox="0 0 24 24" className="h-4 w-4" {...props}>
-            <path d="M12 24c6.627 0 12-5.373 12-12S18.627 0 12 0 0 5.373 0 12s5.373 12 12 12z" fill="#9945FF" />
-            <path
-                d="M7.147 14.775l1.669-1.669h8.571l-1.669 1.669H7.147zm0-4.55l1.669-1.669h8.571l-1.669 1.669H7.147z"
-                fill="#fff"
-            />
-        </svg>
-    )
+	return (
+		<svg viewBox="0 0 24 24" className="h-4 w-4" {...props}>
+			<path d="M12 24c6.627 0 12-5.373 12-12S18.627 0 12 0 0 5.373 0 12s5.373 12 12 12z" fill="#6FBCF0" />
+			<path
+				fillRule="evenodd"
+				clipRule="evenodd"
+				d="M7.373 4.877a.374.374 0 01.374-.374h7.954c.207 0 .374.168.374.374v2.374a.374.374 0 01-.374.374H7.747a.374.374 0 01-.374-.374V4.877zm0 4.123a.374.374 0 01.374-.374h7.954c.207 0 .374.168.374.374v2.374a.374.374 0 01-.374.374H7.747a.374.374 0 01-.374-.374V9zm0 4.123a.374.374 0 01.374-.374h7.954c.207 0 .374.168.374.374v2.374a.374.374 0 01-.374.374H7.747a.374.374 0 01-.374-.374V13.123z"
+				fill="#fff"
+			/>
+		</svg>
+	)
 }
 
 export default function LoanInterface() {
-    const [loanAmount, setLoanAmount] = React.useState("100")
-    const [collateralAmount, setCollateralAmount] = React.useState("0.008299")
-    const [selectedChain, setSelectedChain] = React.useState(CHAINS[0])
-    const [ltvValue, setLtvValue] = React.useState([50])
-    const [loanTerm, setLoanTerm] = React.useState("1")
-    const [excessCollateral, setExcessCollateral] = React.useState(false)
-    const [autoMargin, setAutoMargin] = React.useState(false)
-    const [isQuickLoan, setIsQuickLoan] = React.useState(false)
-    const [selectedCurrency, setSelectedCurrency] = React.useState("USD")
-    const [walletAddress, setWalletAddress] = React.useState("")
+	const [loanAmount, setLoanAmount] = React.useState("100")
+	const [collateralAmount, setCollateralAmount] = React.useState("0.008299")
+	const [selectedChain, setSelectedChain] = React.useState(CHAINS[0])
+	const [ltvValue, setLtvValue] = React.useState([50])
+	const [loanTerm, setLoanTerm] = React.useState("1")
+	const [excessCollateral, setExcessCollateral] = React.useState(false)
+	const [autoMargin, setAutoMargin] = React.useState(false)
+	const [isQuickLoan, setIsQuickLoan] = React.useState(false)
+	const [selectedCurrency, setSelectedCurrency] = React.useState("USD")
+	const [walletAddress, setWalletAddress] = React.useState("")
 
-    // Calculate total repayment
-    const interestRate = 8
-    const loanExchangeRate = 24108.95
-    const totalInterest = (parseFloat(loanAmount) * interestRate) / 100
-    const monthlyPayment = parseFloat(loanAmount) + totalInterest
+	// Calculate total repayment
+	const interestRate = 8
+	const loanExchangeRate = 24108.95
+	const totalInterest = (parseFloat(loanAmount) * interestRate) / 100
+	const monthlyPayment = parseFloat(loanAmount) + totalInterest
 
-    // Dummy functions to simulate collateral collection and fund transfer
-    const transferFunds = () => {
-        if (!walletAddress) {
-            alert("Please enter your wallet address")
-            return;
-        }
-        alert(`Funds of ${loanAmount} ${selectedCurrency} will be transferred to ${walletAddress}`)
-    }
+	// Dummy functions to simulate collateral collection and fund transfer
+	const transferFunds = () => {
+		if (!walletAddress) {
+			alert("Please enter your wallet address")
+			return;
+		}
+		alert(`Funds of ${loanAmount} ${selectedCurrency} will be transferred to ${walletAddress}`)
+	}
 
-    const collectCollateral = () => {
-        if (!walletAddress) {
-            alert("Please enter your wallet address")
-            return;
-        }
-        alert(`Collateral of ${collateralAmount} ${selectedChain.symbol} collected to ${walletAddress}`)
-    }
+	const collectCollateral = () => {
+		if (!walletAddress) {
+			alert("Please enter your wallet address")
+			return;
+		}
+		alert(`Collateral of ${collateralAmount} ${selectedChain.symbol} collected to ${walletAddress}`)
+	}
 
-    return (
-			<div className="min-h-screen bg-gray-900 text-white p-6">
+	return (
+			<div className="min-h-screen bg-gradient-to-r from-[#000c24] to-[#001e4d] text-white p-6">
 				<div className="max-w-6xl mx-auto">
 					<div className="flex gap-2 mb-8">
 						<button
