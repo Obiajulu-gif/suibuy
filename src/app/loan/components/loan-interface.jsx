@@ -75,7 +75,7 @@ export default function LoanInterface() {
 	}
 
 	return (
-			<div className="min-h-screen bg-gradient-to-r from-[#000c24] to-[#001e4d] text-white p-6">
+			<div className="min-h-screen bg-gradient-to-r from-[#000c24] to-[#001e4d] text-white p-6 ">
 				<div className="max-w-6xl mx-auto">
 					<div className="flex gap-2 mb-8">
 						<button
