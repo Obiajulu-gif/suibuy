@@ -1,6 +1,8 @@
+
 import "./globals.css";
-import ClientLayout from "./ClientLayout"; // Import the new client-side layout
-import { Providers } from "./providers"
+import WalletWrapper from "./WalletWrapper";
+import { Metadata } from "next";
+import Head from "next/head";
 
 export const metadata = {
 	title: "Suibuy Marketplace",
@@ -10,10 +12,16 @@ export const metadata = {
 export default function RootLayout({ children }) {
 	return (
 		<html lang="en">
+			<Head>
+				<title>{metadata.title}</title>
+				<meta name="description" content={metadata.description} />
+				<meta name="viewport" content="width=device-width, initial-scale=1" />
+				<link rel="icon" href="/favicon.ico" />
+			</Head>
 			<body>
-<Providers>
-				<ClientLayout>{children}</ClientLayout>
-				</Providers>
+				<WalletWrapper>
+					<main>{children}</main>
+				</WalletWrapper>
 			</body>
 		</html>
 	);

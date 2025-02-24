@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { AiOutlineMenu, AiOutlineClose, AiOutlineUser } from "react-icons/ai";
 import Link from "next/link";
 import { ShoppingCart } from "lucide-react";
+import ConnectBtn from "./ConnectButton";
 
 export default function Navbar() {
 	const [navOpen, setNavOpen] = useState(false);
@@ -69,11 +70,8 @@ export default function Navbar() {
 								<ShoppingCart className="h-6 w-6 md:h-10 md:w-10 text-white" />
 							</button>
 							<AiOutlineUser className="text-white text-xl md:text-2xl cursor-pointer" />
-							<Link href="/explore">
-								<button className="hidden md:block bg-[#009ffd] hover:bg-[#2a2a72] text-white font-bold py-2 px-4 rounded-lg">
-									Explore Now
-								</button>
-							</Link>
+
+							<ConnectBtn connectText="Connect wallet" disconnectText="Log Out" />
 
 							{/* Mobile Menu Toggle */}
 							<button
