@@ -7,6 +7,7 @@ import { FiShoppingCart } from "react-icons/fi";
 import { FaTshirt, FaHome, FaGamepad, FaUtensils } from "react-icons/fa";
 import { HiMenu, HiX } from "react-icons/hi";
 import { motion } from "framer-motion"; // For animations
+import ConnectBtn from "../../components/ConnectButton";
 
 const Navbar = () => {
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -61,9 +62,7 @@ const Navbar = () => {
 					</Link>
 
 					{/* Connect Button */}
-					<button className="bg-blue hover:bg-blue-700 px-4 py-2 rounded-lg text-white font-bold transition-all">
-						Connect
-					</button>
+					<ConnectBtn connectText="Connect wallet" disconnectText="Log Out" />
 				</div>
 			</div>
 
@@ -86,9 +85,7 @@ const Navbar = () => {
 					</Link>
 
 					{/* Connect Button in Mobile View */}
-					<button className="w-full bg-blue hover:bg-blue-700 py-2 mt-4 rounded-lg text-white font-bold transition-all">
-						Connect
-					</button>
+					<ConnectBtn connectText="Connect wallet" disconnectText="Log Out" />
 				</div>
 
 				{/* Mobile Secondary Navigation */}

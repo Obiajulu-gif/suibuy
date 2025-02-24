@@ -13,7 +13,7 @@ export default function ConnectBtn({
 	return (
 		<div className="relative">
 			{wallet.connected ? (
-				<div className="group flex items-center space-x-2 bg-[#232429] px-3 py-1 rounded-lg text-white text-sm cursor-pointer hover:bg-[#2c2d33] transition-colors">
+				<div className="group flex items-center space-x-2 bg-[#232429] px-2 py-1 rounded-lg text-white text-sm cursor-pointer hover:bg-[#2c2d33] transition-colors">
 					<span>{addressEllipsis(wallet.address)}</span>
 					<button
 						className="hidden group-hover:block text-xs text-red-500 hover:text-red-600 transition-colors"
@@ -23,7 +23,7 @@ export default function ConnectBtn({
 					</button>
 				</div>
 			) : (
-				<WalletConnectButton className="px-3 py-1 rounded-lg bg-[#02c0ff] text-white text-sm hover:bg-[#02a0dd] transition-colors">
+				<WalletConnectButton className="px-2 py-1 rounded-lg bg-[#02c0ff] text-white text-sm hover:bg-[#02a0dd] transition-colors">
 					{connectText}
 				</WalletConnectButton>
 			)}
